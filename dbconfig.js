@@ -2,7 +2,7 @@ import mongoose,{connect}  from "mongoose";
 import "colors"
 mongoose.set("strictQuery", true);
 const db = async () => {
-mongoose.connect(process.env.MONGO_URI,{
+mongoose.connect(process.env.MONGO_REMOTE_URL,{
     useNewUrlParser: true,
     useUnifiedTopology:true,
   

@@ -10,6 +10,7 @@ import usersRouter from './routes/users.js';
 import "colors"
 import dotenv from "dotenv"
 import db from "./dbconfig.js";
+import billRouter from './routes/bills.js';
 dotenv.config();
 var app = express();
 
@@ -26,7 +27,8 @@ dotenv.config()
 
 
 app.use('/api/items', indexRouter);
-app.use('/users', usersRouter);
+app.use('/auth', usersRouter);
+app.use("/billing",billRouter);
 
 db();
 
